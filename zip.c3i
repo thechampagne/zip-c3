@@ -70,7 +70,7 @@ const int EWRINIT = -32;     // cannot initialize writer from reader
  * @return error message string corresponding to errnum or NULL if error is not
  * found.
  */
-fn char* strerror(int errnum) @extern("zip_strerror");
+fn char* strError(int errnum) @extern("zip_strerror");
 
 /*
  * @struct Zip
@@ -216,7 +216,7 @@ fn long Zip.entryIndex(Zip zip) @extern("zip_entry_index");
  * @return the return code - 1 (true), 0 (false), negative number (< 0) on
  *         error.
  */
-fn int Zip.entryIsdir(Zip zip) @extern("zip_entry_isdir");
+fn int Zip.entryIsDir(Zip zip) @extern("zip_entry_isdir");
 
 /*
  * Returns the uncompressed size of the current zip entry.
