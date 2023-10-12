@@ -21,6 +21,8 @@
  */
 module zip;
 
+// Documentation copied from https://github.com/kuba--/zip/blob/master/src/zip.h
+
 /*
  * Default zip compression level.
  */
