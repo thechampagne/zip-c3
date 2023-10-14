@@ -4,6 +4,23 @@
 
 C3 binding for a portable, simple **zip** library.
 
+### Example
+```c
+import std::core::string;
+import zip;
+
+fn void main() {
+    Zip z = zip::open("/tmp/c3.zip", 6, 'w');
+    defer z.close();
+    
+    z.entryOpen("test");
+    defer z.entryClose();
+    
+    string::ZString content = "test content";
+    z.entryWrite(content, content.len());
+}
+```
+
 ### References
  - [zip](https://github.com/kuba--/zip)
 
